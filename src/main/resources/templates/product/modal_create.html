@@ -1,0 +1,93 @@
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<th:block th:fragment="modal_create">
+    <div id="modalCreateProduct" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create Product</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-alert-danger hide"></div>
+                    <form id="frmCreateProduct">
+                        <fieldset class="row g-3">
+                            <div class="col-lg-7">
+                                <div class="col-md-12">
+                                    <label class="form-label">Title</label>
+                                    <input type="text" class="form-control" id="titleCre" name="titleCre">
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Price</label>
+                                    <input type="currency" class="form-control" id="PriceCre" name="PriceCre" >
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Description</label>
+                                    <input type="tel" class="form-control" id="descriptionCre" name="descriptionCre">
+                                </div>
+
+                                <div class="col-md-12 ">
+                                    <label class="form-label ">Type  </label>
+                                    <select name="" id="typeCre" class="custom-select form-control">
+                                        <option value="1">MALE</option>
+                                        <option value="2">FEMALE</option>
+                                        <option value="3">UNISEX</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-12">
+                                    <label class="form-label">Brand</label>
+                                    <select name="" id="brandCre" class="custom-select form-control">
+                                        <option value="1">DIOR</option>
+                                        <option value="2">CHANEL</option>
+                                        <option value="3">NAUTICA</option>
+                                        <option value="4">ROJA DOVE</option>
+                                        <option value="5">VERSACE</option>
+                                        <option value="6">CREED</option>
+                                        <option value="7">YSL</option>
+                                        <option value="8">LANCOME</option>
+                                        <option value="9">MOSCHINO</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-5">
+                                <section>
+                                    <div class="wrapper active">
+                                        <div class="image-preview">
+                                            <canvas id="canvas" style="display: none;"></canvas>
+                                        </div>
+                                        <div class="content">
+                                            <div class="icon">
+                                                <i class="fas fa-cloud-upload-alt"></i>
+                                            </div>
+                                            <div class="text">
+                                                No file chosen, yet!
+                                            </div>
+                                            <div class="text">
+                                                Max file size = 2MB
+                                            </div>
+                                        </div>
+                                        <div class="clear-image-preview">
+                                            <i class="fas fa-times"></i>
+                                        </div>
+                                        <div class="file-name">
+                                            Change image
+                                        </div>
+                                    </div>
+                                    <input type="file" id="imageFile" accept="image/jpeg, image/png" hidden="">
+                                </section>
+                            </div>
+
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" id="btnCreateCustomer" class="btn btn-outline-primary">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                        Create Product
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
